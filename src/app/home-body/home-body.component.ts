@@ -27,13 +27,6 @@ export class HomeBodyComponent implements OnInit {
         this.servicesDataSection3.push(data[5]);
     }
 
-    test1 = false;
-
-    test() {
-        this.test1 = true;
-        console.log("test");
-    }
-
     goToServicePage(ser) {
         this.router.navigate(['/servicios'], { queryParams: { id: ser.id}});
     }

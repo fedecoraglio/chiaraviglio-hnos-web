@@ -14,17 +14,14 @@ export class FooterComponent implements OnInit {
   submitted: boolean;
   showMessageSuccess: boolean;
   showMessageError: boolean;
-  today: Date;
   exchangeData: any = {};
 
   constructor(
-    private http: Http,
-    private exchangeService: ExchangeService) {
+    private http: Http) {
 
   }
 
   ngOnInit() {
-    this.today = new Date();
     this.showMessageSuccess = false;
     this.showMessageError = false;
     this.submitted = false;
@@ -34,23 +31,6 @@ export class FooterComponent implements OnInit {
       phone: null,
       message: null
     }
-    this.exchangeService.getLastExchageRange().subscribe(
-      resp => {
-        const data = resp.json();
-        let exchangeValue = 'N/C';
-        if(data.USD_ARS.val) {
-          exchangeValue = data.USD_ARS.val.toFixed(2).toString().replace('.', ',');
-        }
-        this.exchangeData = {
-          exchange: exchangeValue
-        }
-      },
-      err => {
-        this.exchangeData = {
-          exchange: "N/C"
-        }
-      }
-    );
   }
 
   sendMessage() {
@@ -75,8 +55,8 @@ export class FooterComponent implements OnInit {
       message: this.contactData.message,
     }).subscribe(
       resp => {
-        console.info(resp);
-        console.info("Los datos se enviaron con exito.");
+        console.log(resp);
+        console.log('Los datos se enviaron con exito.');
         this.showMessageSuccess = true;
         this.showMessageError = false;
         this.contactData = {

@@ -14,3 +14,32 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+.btn-more {
+  width: 100rem;
+  margin: 3rem 3rem 3rem 3rem;
+}
+
+.card-container {
+  width: 30rem;
+  margin: 3rem 3rem 3rem 3rem;
+  padding-bottom: 5rem;
+}
+
+.card {
+  box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 1.2);
+  background-color: black; border: none;
+}
+
+.card-description {
+  color: #fff;
+  text-align: left;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}

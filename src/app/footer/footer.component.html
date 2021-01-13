@@ -1,192 +1,133 @@
-<!-- Footer -->
 <div id="footer">
-  <div class="container">
-    <div class="row">    
-      <section class="col-12 col-sm-6">
-        <div class="row">
-          <div class="col-12">      
-            <div class="media">
-                <div class="media-left">
-                  <a target="_blank" href="https://www.google.com.ar/maps/place/Chiaraviglio+Hnos/@-31.6648115,-63.1964594,17z/data=!3m1!4b1!4m5!3m4!1s0x95ccb7d24b14c4a3:0x496c4b7626ab2c7d!8m2!3d-31.6648161!4d-63.1942707">
-                    <i class="fa fa-location-arrow"></i>
-                  </a>
-                </div>
-                <div class="media-body media-body-custom">
-                  <h6 class="media-heading">Dirección:</h6>
-                    <p>
-                      <a target="_blank" href="https://www.google.com.ar/maps/place/Chiaraviglio+Hnos/@-31.6648115,-63.1964594,17z/data=!3m1!4b1!4m5!3m4!1s0x95ccb7d24b14c4a3:0x496c4b7626ab2c7d!8m2!3d-31.6648161!4d-63.1942707">
-                        Pte Peron esq. Pte Illia | Calchín | Córdoba
-                      </a>
-                    </p>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">      
-            <div class="media">
-                <div class="media-left">
-                  <i class="fa fa-home"></i>
-                </div>
-                <div class="media-body media-body-custom">
-                  <h6 class="media-heading">Horario de Atención:</h6>
-                  <p>Lunes a Viernes: 8:00 a 12:00, 14:00 a 19:30.</p>
-                  <p>Sábados 8:00 a 12:00</p>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="media">
-                <div class="media-left">
-                  <i class="fa fa-envelope"></i>
-                </div>
-                <div class="media-body media-body-custom">
-                  <h6 class="media-heading">Correo electrónico:</h6>
-                  <p>contacto@chiarahnos.com.ar</p>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="media">
-                <div class="media-left">
-                  <i class="fa fa-phone"></i>
-                </div>
-                <div class="media-body media-body-custom">
-                  <h6 class="media-heading">Teléfono:</h6>
-                  <p>03573 49-7107</p>
-                </div>
-            </div>
-          </div>
-        </div>
-      </section>      
-      <section class="col-12 col-md-6">
-        <div class="row">
-          <div class="col-12">
-            <h3>Dejános tu consulta</h3>
-            <form (ngSubmit)="sendMessage()" #form="ngForm" class="w-100">
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <div class="form-group">
-                    <input type="text" 
-                           class="form-control" 
-                           name="name" 
-                           id="name"
-                           #name="ngModel"
-                           [(ngModel)]="contactData.name"
-                           placeholder="Nombre" />
-                  </div>            
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="form-group">
-                    <input type="text" 
-                           class="form-control"
-                           name="phone" 
-                           id="phone"
-                           #phone="ngModel"
-                           [(ngModel)]="contactData.phone"
-                           placeholder="Teléfono" />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="form-group">
-                    <input type="email"
-                           class="form-control"
-                           name="email"
-                           id="email"
-                           #email="ngModel"
-                           [(ngModel)]="contactData.email"
-                           placeholder="Email" />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <textarea name="message" 
-                            class="form-control" 
-                            id="message"
-                            name="message"
-                            placeholder="Mensaje"
-                            #message="ngModel"
-                            [(ngModel)]="contactData.message"
-                            rows="5">
-                  </textarea>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-sm-6">
-                  <div class="button-action">
-                    <input type="submit" 
-                           id="btnSend"
-                           name="btnSend"
-                           [disabled]="submitted || shouldDisabledButton()"
-                           class="btn btn-success" 
-                           value="Enviar consulta" />
-                  </div>                        
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="row" style="padding-top: 10px;">
-          <div class="col-12">
-            <div class="alert alert-success" *ngIf="!showMessageError && showMessageSuccess">
-              <strong>Se envió el mensaje con exito!</strong> Pronto nos comunicaremos con vos
-            </div>
-            <div class="alert alert-danger" *ngIf="showMessageError && !showMessageSuccess">
-              Ocurrio un problema, pero no te preocupes intenta nuevamente.
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="row" style="padding-top:3em;">
-      <div class="col-12 col-lg-8 offset-lg-2">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th colspan="2" style="text-align: center">Última Cotización</th>
-            </tr>
-            <tr>                  
-              <th scope="col" style="text-align: center"> {{ today | date: 'dd/MM/yyyy'}}</th>
-              <th scope="col" style="text-align: center">Cotización</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center">Dolar USD*</td>
-              <td style="text-align: center">
-                  <a target="_blank" href="http://www.bna.com.ar/">{{exchangeData.exchange}}</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <small>
-          (*) Este valor es un promedio del mercado. Para más información consultar
-          <a target="_blank" href="http://www.bna.com.ar/">Banco Nación Argentina</a>
-        </small>
-      </div>
-    </div>
-    <!-- Icons -->
-    <ul class="icons">
-      <!--li><a href="#" class="icon fa fa-twitter"><span class="label">Twitter</span></a></li-->
-      <li>
-          <a href="https://www.facebook.com/chiarahnos/"
-             target="_blank" class="icon fa fa-facebook">
-            <span class="label">Facebook</span>
+  <div class="d-flex flex-row flex-wrap justify-content-center">
+    <section class="section-container">      
+      <div class="media">
+        <div class="media-left">
+          <a target="_blank" href="https://www.google.com.ar/maps/place/Chiaraviglio+Hnos/@-31.6648115,-63.1964594,17z/data=!3m1!4b1!4m5!3m4!1s0x95ccb7d24b14c4a3:0x496c4b7626ab2c7d!8m2!3d-31.6648161!4d-63.1942707">
+            <i class="fa fa-location-arrow"></i>
           </a>
-      </li>
-      <!--li><a href="#" class="icon fa fa-github"><span class="label">GitHub</span></a></li-->
-      <li><a href="https://www.linkedin.com/company/chiaraviglio-hnos/"
-             target="_blank"
-             class="icon fa fa-linkedin">
-             <span class="label">LinkedIn</span></a></li>
-      <!--li><a href="#" class="icon fa fa-google-plus"><span class="label">Google+</span></a></li-->
-    </ul>
+        </div>
+        <div class="media-body media-body-custom">
+          <h6 class="media-heading">Dirección:</h6>
+            <p>
+              <a target="_blank" href="https://www.google.com.ar/maps/place/Chiaraviglio+Hnos/@-31.6648115,-63.1964594,17z/data=!3m1!4b1!4m5!3m4!1s0x95ccb7d24b14c4a3:0x496c4b7626ab2c7d!8m2!3d-31.6648161!4d-63.1942707">
+                Pte Peron esq. Pte Illia | Calchín | Córdoba
+              </a>
+            </p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <i class="fa fa-home"></i>
+        </div>
+        <div class="media-body media-body-custom">
+          <h6 class="media-heading">Horario de Atención:</h6>
+          <p>Lunes a Viernes: 8:00 a 12:00, 14:00 a 19:30.</p>
+          <p>Sábados 8:00 a 12:00</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <i class="fa fa-envelope"></i>
+        </div>
+        <div class="media-body media-body-custom">
+          <h6 class="media-heading">Correo electrónico:</h6>
+          <p>contacto@chiarahnos.com.ar</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <i class="fa fa-phone"></i>
+        </div>
+        <div class="media-body media-body-custom">
+          <h6 class="media-heading">Teléfono:</h6>
+          <p>03573 - 497107</p>
+        </div>
+      </div>
+    </section>
+    <section class="section-container">
+      <div class="d-flex flex-row justify-content-center">
+        <h3>Dejános tu consulta</h3>
+      </div>
+      <div class="d-flex flex-row justify-content-center">
+        <form (ngSubmit)="sendMessage()" #form="ngForm" class="w-100">          
+            <div class="form-group">
+              <input type="text" 
+                      class="form-control" 
+                      name="name" 
+                      id="name"
+                      #name="ngModel"
+                      [(ngModel)]="contactData.name"
+                      placeholder="Nombre" />
+            </div>                      
+            <div class="form-group">
+              <input type="text" 
+                      class="form-control"
+                      name="phone" 
+                      id="phone"
+                      #phone="ngModel"
+                      [(ngModel)]="contactData.phone"
+                      placeholder="Teléfono" />
+            </div>
+            <div class="form-group">
+              <input type="email"
+                     class="form-control"
+                     name="email"
+                     id="email"
+                     #email="ngModel"
+                     [(ngModel)]="contactData.email"
+                     placeholder="Email" />
+            </div>
+            <div>
+              <textarea name="message" 
+                        class="form-control" 
+                        id="message"
+                        name="message"
+                        placeholder="Mensaje"
+                        #message="ngModel"
+                        [(ngModel)]="contactData.message"
+                        rows="5">
+              </textarea>
+            </div>
+            <div class="button-action">
+              <input type="submit" 
+                     id="btnSend"
+                     name="btnSend"
+                     [disabled]="submitted || shouldDisabledButton()"
+                     class="btn btn-success" 
+                     value="Enviar consulta" />
+            </div>
+        </form>
+      </div>
+      <div class="d-flex flex-row justify-content-around">
+        <div class="alert alert-success" *ngIf="!showMessageError && showMessageSuccess">
+          <strong>Se envió el mensaje con exito!</strong> Pronto nos comunicaremos con vos
+        </div>
+        <div class="alert alert-danger" *ngIf="showMessageError && !showMessageSuccess">
+          Ocurrio un problema, pero no te preocupes intenta nuevamente.
+        </div>
+      </div>
+    </section>    
+  </div>
+  <div class="d-flex flex-row justify-content-center">
+      <!-- Icons -->
+      <ul class="icons">
+        <!--li><a href="#" class="icon fa fa-twitter"><span class="label">Twitter</span></a></li-->
+        <li>
+            <a href="https://www.facebook.com/chiarahnos/"
+                target="_blank" class="icon fa fa-facebook">
+              <span class="label">Facebook</span>
+            </a>
+        </li>
+        <!--li><a href="#" class="icon fa fa-github"><span class="label">GitHub</span></a></li-->
+        <li><a href="https://www.linkedin.com/company/chiaraviglio-hnos/"
+                target="_blank"
+                class="icon fa fa-linkedin">
+                <span class="label">LinkedIn</span></a></li>
+        <!--li><a href="#" class="icon fa fa-google-plus"><span class="label">Google+</span></a></li-->
+      </ul>
+  </div>
+  <div class="copyright-footer-container d-flex flex-column justify-content-center align-items-center">
+    <p class="copyright-footer">Copyright 2020 Chiaraviglio Hnos | Todos los derechos reservados</p>
   </div>
 </div>

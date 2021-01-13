@@ -1,3 +1,13 @@
+<!-- info-top -->
+<section class="info-top">
+  <p class="main-title">
+    {{ today | date: 'dd/MM/yyyy'}} Dólar: <a href="https://www.bna.com.ar/Personas" target="_blank">{{exchangeData.exchange}}</a>
+  </p>
+  <!--div class="copyright">
+    <p>Copyright 2020 Chiaraviglio Hnos | Todos los derechos reservados</p>
+  </div-->
+</section>
+<!-- end of info-top -->  
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

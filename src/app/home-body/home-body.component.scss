@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 5em 0 3em 0;
+  padding: 5rem 1rem 3rem 1rem;
 }
 
 .animated {
@@ -12,6 +12,7 @@
 /**Start image**/
 .container-image {
   position: relative;
+  padding-bottom: 5rem;
 }
 
 .main-image {
@@ -21,6 +22,7 @@
   margin-right: auto;
   transition: .5s ease;
   backface-visibility: hidden;
+  box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 1.2);
 }
 
 .middle {
@@ -62,18 +64,18 @@
   cursor: pointer;
 }
 
-.row {
-  padding-bottom: 2.5em;
-  padding-top: 2.5em;
+.section-container {
+  width: 30rem;
+  padding-bottom: 4rem;
 }
 
 header.major {
-  text-align: center;
-  margin: 0 0 2em 0;
+  text-align: center;  
+  width: 100rem;
 }
 
 header.major h2 {
-  font-size: 2.25em;  
+  font-size: 2.25rem;
 }
 
 header.major .major-text {

@@ -1,45 +1,43 @@
 <nav id="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-4 col-md-5 col-lg-5 col-xl-6">
-        <div class="logo animated" animateOnScroll animationName="pulse">        
-          <a routerLink="/inicio" routerLinkActive="active">
-            <img width="262" height="80" alt="LOGO" src="assets/chiaraviglio_hrnos_logo.png">
-          </a>
-        </div>
+  <div class="d-flex flex-row flex-wrap justify-content-around">
+    <div>
+      <div class="logo animated" animateOnScroll animationName="pulse">        
+        <a routerLink="/inicio" routerLinkActive="active">
+          <img width="262" height="80" alt="LOGO" src="assets/chiaraviglio_hrnos_logo.png">
+        </a>
       </div>
-      <div class="col-12 col-sm-8 col-md-7 col-lg-7 col-xl-6">
-          <ul class="navigation animated" animateOnScroll animationName="pulse">
-            <li>
-              <a routerLink="/inicio" routerLinkActive="active">Inicio</a>
-            </li>
-            <li>
-              <a routerLink="/quienes-somos" routerLinkActive="active">Empresa</a>
-            </li>
-            <li>
-              <a routerLink="/servicios" routerLinkActive="active">Servicios</a>
-            </li>
-            <li>
-              <a routerLink="/productos" routerLinkActive="active">Productos</a>
-            </li>
-            <!--li class="dropdown">
-              <a routerLink="/productos" routerLinkActive="active">Productos</a>
-              <div class="dropdown-content">
-                <a *ngFor="let p of productsData" (click)="goToProductsPage(p)">
-                  {{p.title}}
-                </a>
-              </div>
-            </li-->
-            <li>
-              <a routerLink="/noticias" routerLinkActive="active">Noticias</a>
-            </li>
-            <li>
-              <a target="_blank" href="http://138.118.210.31/ssgweb/index.aspx">Login</a>
-            </li>
-          </ul>
-        </div>
-    </div>  
-  </div>  
+    </div>
+    <div>
+      <ul class="navigation animated" animateOnScroll animationName="pulse">
+        <li>
+          <a routerLink="/inicio" routerLinkActive="active">Inicio</a>
+        </li>
+        <li>
+          <a routerLink="/quienes-somos" routerLinkActive="active">Empresa</a>
+        </li>
+        <li>
+          <a routerLink="/servicios" routerLinkActive="active">Servicios</a>
+        </li>
+        <li>
+          <a routerLink="/productos" routerLinkActive="active">Productos</a>
+        </li>
+        <!--li class="dropdown">
+          <a routerLink="/productos" routerLinkActive="active">Productos</a>
+          <div class="dropdown-content">
+            <a *ngFor="let p of productsData" (click)="goToProductsPage(p)">
+              {{p.title}}
+            </a>
+          </div>
+        </li-->
+        <li>
+          <a routerLink="/noticias" routerLinkActive="active">Noticias</a>
+        </li>
+        <li>
+          <a target="_blank" href="http://138.118.210.31/ssgweb/index.aspx">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <nav class="navbar navbar-light bg-lignt" id="menu-small">

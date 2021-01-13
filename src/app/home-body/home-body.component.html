@@ -1,6 +1,6 @@
 <section class="wrapper animated fadeInLeft">
-  <div class="container">
-    <header class="major ">
+  <div class="d-flex justify-content-center align-items-center">
+    <header class="major">
       <h2 class="major-text">¿Quiénes Somos?</h2>
       <p class="major-text">Chiaraviglio Hnos es una empresa familiar Cordobesa, con más de 15 años de experiencia en el mercado y la zona. Somos una organización jóven y dinámica, dedicada plenamente a cubrir en forma integral las necesidades del productor.</p>
     </header>  
@@ -8,7 +8,7 @@
 </section>
 
 <section class="wrapper animated fadeInRight">
-  <div class="container">
+  <div class="d-flex justify-content-center align-items-center">
     <header class="major">
       <h2 class="major-text">Nutriendo la cultura del campo</h2>
       <p class="major-text">Estamos comprometidos con una agricultura sustentable a través de la generación y adopción de soluciones tecnológicas innovadoras en todas nuestras actividades.</p>
@@ -17,7 +17,7 @@
 </section>
 
 <section class="wrapper wrapper-container animated">
-  <div class="container">
+  <div class="d-flex justify-content-center align-items-center">
     <header class="major animated" animateOnScroll animationName="lightSpeedIn">
       <h2>¿Por qué elegirnos?</h2>
       <p>Contamos con una red de trabajo consolidada, en dónde nuestro principal objetivo es generar valor en cada una de nuestras relaciones para lograr el desarrollo integral de las personas: con nuestros empleados y familias, clientes, proveedores, competidores y colegas.</p>
@@ -26,41 +26,38 @@
 </section>
 
 <section class="wrapper wrapper-container">
-  <div class="container">
-    <div class="row item">
-      <section class="col-12 col-md-6 item" *ngFor="let s of servicesDataSection1">
-        <div class="box highlight animated" animateOnScroll animationName="zoomIn">
-          <img class="icon major" src="{{s.imageUrlPortada}}" autofocus>
-          <h3>{{s.title}}</h3>
-          <p>{{s.subTitle}}</p>          
-        </div>
-      </section>
-    </div>
-    <div class="row item">
-      <section class="col-12 col-md-6 item" *ngFor="let s2 of servicesDataSection2">
-        <div class="box highlight animated" animateOnScroll animationName="zoomIn">
-          <img class="icon major" src="{{s2.imageUrlPortada}}">
-          <h3>{{s2.title}}</h3>
-          <p>{{s2.subTitle}}</p>
-        </div>
-      </section>
-    </div>
-    <div class="row item">
-      <section class="col-12 col-md-6 item" *ngFor="let s2 of servicesDataSection3">
-        <div class="box highlight animated" animateOnScroll animationName="zoomIn">
-          <img class="icon major" src="{{s2.imageUrlPortada}}">
-          <h3>{{s2.title}}</h3>
-          <p>{{s2.subTitle}}</p>
-        </div>
-      </section>
-    </div>
+  <div class="d-flex flex-wrap justify-content-center">
+    <section *ngFor="let s of servicesDataSection1" class="d-flex justify-content-center section-container">
+      <div class="box highlight animated" animateOnScroll animationName="zoomIn">
+        <img class="icon major" src="{{s.imageUrlPortada}}" autofocus>
+        <h3>{{s.title}}</h3>
+        <p>{{s.subTitle}}</p>
+      </div>
+    </section>
+  </div>
+  <div class="d-flex flex-wrap justify-content-center">
+    <section *ngFor="let s2 of servicesDataSection2" class="d-flex justify-content-center section-container">
+      <div class="box highlight animated" animateOnScroll animationName="zoomIn">
+        <img class="icon major" src="{{s2.imageUrlPortada}}">
+        <h3>{{s2.title}}</h3>
+        <p>{{s2.subTitle}}</p>
+      </div>
+    </section>
+  </div>
+  <div class="d-flex flex-wrap justify-content-center">
+    <section *ngFor="let s3 of servicesDataSection3" class="d-flex justify-content-center section-container">
+      <div class="box highlight animated" animateOnScroll animationName="zoomIn">
+        <img class="icon major" src="{{s3.imageUrlPortada}}">
+        <h3>{{s3.title}}</h3>
+        <p>{{s3.subTitle}}</p>
+      </div>
+    </section>
   </div>
 </section>
 
-
 <!-- Mision -->
 <section class="wrapper">
-  <div class="container">
+  <div class="d-flex flex-wrap justify-content-center">
     <header class="major animated" animateOnScroll animationName="slideInLeft">
       <h2 class="major-text">Misión</h2>
       <p class="major-text">
@@ -72,8 +69,8 @@
 
 <!-- Vision -->
 <section class="wrapper">
-  <div class="container">
-    <header class="major animated" animateOnScroll animationName="slideInRight">
+  <div class="d-flex flex-wrap justify-content-center">
+    <header class="major animated" animateOnScroll animationName="slideInRight" >
       <h2 class="major-text">Visión</h2>
       <p class="major-text">
             Somos reconocidos en el sector agropecuario nacional como una empresa profesional referente en el manejo diferenciado de empresas agropecuarias.
@@ -85,7 +82,7 @@
 </section>
 
 <section class="wrapper wrapper-container">
-  <div class="container">
+  <div class="d-flex flex-wrap justify-content-center">
     <div class="container-image animated" animateOnScroll animationName="fadeInUp">
       <img class="img-fluid main-image" src="/assets/grafico_semillas.png" alt="Grafico de semillas">
       <div class="middle">

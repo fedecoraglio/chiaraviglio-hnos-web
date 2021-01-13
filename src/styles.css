@@ -1,3 +1,7 @@
+html {
+  font-size: 97%;
+  box-sizing: border-box;
+}
 body { 
   background: url(/assets/background_main_mobile.png); 
   background-repeat: no-repeat;
@@ -8,7 +12,37 @@ body {
   -moz-background-size: cover; 
   -o-background-size: cover; 
   background-size: cover;
+  padding:0;
+  margin:0;
 }
+
+/* common header */
+.common-header {
+  padding: 5rem;
+  text-align: center;
+  color: #000000;
+}
+
+.common-heading {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+.small-underline {
+  width: 9rem;
+  height: .1rem;
+  margin: 0 auto 1rem auto;
+  background-color: #fff;
+}
+
+.big-underline {
+  width: 20rem;
+  height: .1rem;
+  margin: auto;
+  background-color: #fff;
+}
+/* end of common header */
 
 #menu-small, #footer { 
   background-image: url(/assets/background_main_mobile.png); 
@@ -29,10 +63,12 @@ p {
 .wrapper {
   padding-top: 4em;
   padding-bottom: 4em;
+  width: 100%;
 }
 
 .wrapper-container {
-  background-color: #ffffff;
+  background-color: rgb(221, 221, 221);
+  width: 100%;
 }
 
 #header {
@@ -144,10 +180,10 @@ p {
   color: #fff;
   border-radius: 100%;
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 15rem;
+  height: 15rem;
   line-height: 8em;
-  box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
+  box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 1.2);
   margin: 0 0 2em 0;
 }
 
