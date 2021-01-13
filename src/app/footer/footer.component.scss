@@ -1,0 +1,75 @@
+.button-action {
+  padding-top: 1em;
+}
+
+
+#footer {
+  //padding: 4em 0 8em 0;
+  //background-image: url("/assets/bg02.png"), url("/assets/bg03.png"), url("/assets/bg01.png"), url("https://html5up.net/uploads/demos/hyperspace/assets/css/images/intro.svg");
+  //background-color: #f6f6f6;
+  //background-color: #4686a0;
+  //background-attachment: fixed, fixed,	fixed;
+  //background-image: url(/assets/overlay2.png), url(/assets/overlay3.svg), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+  //background-position: top left,	center center, center center;
+  //background-size: auto,	cover, cover;
+  padding: 6em 0 6em 0;
+  margin-bottom: -2rem;
+}
+
+#footer {
+  color: #f6f6f6;
+}
+
+#footer a {
+  color: inherit;
+  border-bottom-color: rgba(71, 71, 71, 0.25);
+}
+
+#footer a:hover {
+  color: #37c0fb;
+  border-bottom-color: transparent;
+}
+
+#footer .container {
+  margin-bottom: 4em;
+}
+
+#footer .icons {
+  text-align: center;
+  margin: 0;
+}
+
+#footer .icons a:hover {
+  color: #474747;
+}
+
+#footer .copyright {
+  //color: #999;
+  margin-top: 1.5em;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+ul.icons {
+  cursor: default;
+  padding-top: 6em;
+}
+
+ul.icons li {
+  display: inline-block;
+  line-height: 1em;
+  padding-left: 1.5em;
+}
+
+ul.icons li:first-child {
+  padding-left: 0;
+}
+
+ul.icons li a, ul.icons li span {
+  font-size: 2.5em;
+  border: 0;
+}
+
+.media-body-custom {
+  padding-left: 1em;
+}

@@ -1,0 +1,61 @@
+<section class="wrapper wrapper-container" *ngIf="isLoading  && !showError">
+  <div class="sk-fading-circle">
+    <div class="sk-circle1 sk-circle"></div>
+    <div class="sk-circle2 sk-circle"></div>
+    <div class="sk-circle3 sk-circle"></div>
+    <div class="sk-circle4 sk-circle"></div>
+    <div class="sk-circle5 sk-circle"></div>
+    <div class="sk-circle6 sk-circle"></div>
+    <div class="sk-circle7 sk-circle"></div>
+    <div class="sk-circle8 sk-circle"></div>
+    <div class="sk-circle9 sk-circle"></div>
+    <div class="sk-circle10 sk-circle"></div>
+    <div class="sk-circle11 sk-circle"></div>
+    <div class="sk-circle12 sk-circle"></div>
+  </div>
+</section>
+
+<section class="wrapper wrapper-container" *ngIf="!isLoading && showError">
+  <div class="container">
+    <div class="row">
+      <div class="alert alert-danger col-12">
+        Ocurrio un error al cargar las noticias. Por favor, intente mas tarde
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrapper wrapper-container" *ngIf="!isLoading  && !showError">
+  <div class="container">
+    <div id="content">
+      <header>
+        <h3>Últimas Noticias</h3>
+      </header>
+      <div class="row animated" style="padding-top: 2rem;">
+        <div class="col-12 col-sm-6 animated" *ngFor="let sface of facebookPostData" style="padding-bottom: 2rem;" animateOnScroll animationName="fadeIn">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">{{sface.created_time | date: 'dd/MM/yyyy'}}</h5>
+            </div>
+            <img class="card-img-top" src="{{sface.full_picture}}" alt="{{sface.created_time | date: 'dd/MM/yyyy'}}">
+            <div class="card-body">              
+              <p class="card-text card-description">{{sface.message}}</p>
+              <a href="{{sface.link}}" target="_blank" class="btn btn-success">Ver Más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="padding-bottom: 1em">
+      <div class="col-12">
+        <button type="button" 
+                class="btn btn-link col-12" 
+                style="border:0.5px solid" 
+                [disabled]="showSpinnerPagination"
+                (click)="showMoreFacebookPost()">
+            Mas Noticias
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

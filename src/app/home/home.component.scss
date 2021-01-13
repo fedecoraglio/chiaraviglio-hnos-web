@@ -1,0 +1,101 @@
+
+/* Banner */
+#banner {
+  /*background-image: url("/assets/home_1.jpeg");**/
+  background-position: center center;
+  height: 39em;
+  text-align: center;
+  position: relative;
+}
+
+#banner header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #212121;
+  background: rgba(27, 27, 27, 0.75);
+  color: #fff;
+  padding: 1.5em 0;
+}
+
+.img-description {  
+  position: absolute;  
+  bottom: 0;
+  left: 0;
+  top: 1;
+  width: 100%;    
+}
+
+.img-description h3 {
+  display: block;
+  color: #fff;
+  padding: 1em 0;  
+  font-size: 1.25em;  
+  text-align: center;
+  opacity: 0.75;
+  margin: 15px;
+  margin-bottom: 0;
+  background: #212121;
+}
+
+
+#banner header h2 {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.25em;
+  vertical-align: middle;
+}
+
+#banner header h2 em {
+  opacity: 0.75;
+}
+
+#banner header h2 a {
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+#banner header h2 a:hover, h2 a:hover {
+  border-bottom-color: transparent;
+}
+
+#banner header .button {
+  vertical-align: middle;
+  margin-left: 1em;
+}
+
+/**@media only screen and (min-width: 480px ) {
+  #banner {
+    height: 15em;
+  }
+}
+/**
+@media only screen and (max-width: 736px) {
+  #banner {
+    height: 15em;
+  }
+}
+/**
+@media only screen and (max-width: 840px) {
+  #banner {
+    height: 20em;
+  }  
+}
+
+@media only screen and (max-width: 980px) {
+  #banner {
+    height: 24.3em;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #banner {
+    height: 32.7em;
+  }
+}
+
+@media only screen and (max-width: 1680px) {  
+  #banner {
+    height: 32.6em;
+  }
+}**/

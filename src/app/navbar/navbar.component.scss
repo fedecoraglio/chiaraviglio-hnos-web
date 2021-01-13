@@ -1,0 +1,130 @@
+/*------------ HEADER ------------*/
+#header {	
+	padding: 80px 0 80px;
+}
+/** logo **/
+.logo {	
+	display: inline-block;
+}
+/** navigation **/
+.navigation {	
+	list-style: none;
+	margin: 15px 0 0;
+  padding: 0;
+  font-size: 1rem;
+}
+.navigation li {
+	float: left;
+	margin-left: 20px;
+	position: relative;
+}
+.navigation li a {
+	//color: #b8c6ac;	
+	color: #000000;
+	text-decoration: none;
+	text-transform: capitalize;
+	cursor: pointer;
+}
+
+ul li a:hover, a.active { 
+	color: #61FF00;
+}
+
+.navigation li a.active {
+	color: #61FF00;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.navigation li > div {
+	display: none;	
+	position: absolute;
+	left: 0px;
+	top: 24px;
+}
+.navigation li:hover > div {
+	display: block;
+}
+.navigation li > div a {
+	//color: #b8c6ac;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+}
+.navigation li > div a:hover {
+	color: #000000;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+	color: black;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.toggleMenuStyle {
+	display: block;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f6f6f6;
+	//background-image: url("/assets/bg02.png"), url("/assets/bg03.png"), url("/assets/bg01.png");
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.navigation .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+	background-color: #f6f6f6;
+	//background-image: url("/assets/bg02.png"), url("/assets/bg03.png"), url("/assets/bg01.png");
+}
+
+/**- Mobile -**/
+#menu-small {
+  padding: 80px 0 80px;
+  font-size: 1rem;
+}
+
+#menu-small ul li a:hover, a.active { 
+	color: #61ff00;
+}
+
+#menu-small li a.active {
+	color: #61ff00;
+}
+
+#menu-small li a {
+	color: #f6f6f6;
+	text-decoration: none;
+	text-transform: capitalize;
+	cursor: pointer;
+}

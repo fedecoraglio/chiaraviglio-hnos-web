@@ -1,0 +1,75 @@
+<section class="wrapper wrapper-container">
+  <div class="container">
+    <div class="row item animated" animateOnScroll animationName="fadeInUp">
+      <div class="col-12">
+        <h3>Nuestros Productos</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 item animated" *ngFor="let prod of productsDataSection1" animateOnScroll animationName="fadeInUp">
+        <div class="card">
+          <img class="card-img-top" src="{{prod.imageUrl}}" alt="{{prod.title}}">
+          <div class="card-body">
+            <h5 class="card-title">{{prod.title}}</h5>
+            <p class="card-text card-description">{{prod.description}}</p>
+            <a href="{{prod.url}}" target="_blank" class="btn btn-success">Visitar Página</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 item animated" *ngFor="let prod of productsDataSection2" animateOnScroll animationName="fadeInUp">
+        <div class="card">
+          <img class="card-img-top" src="{{prod.imageUrl}}" alt="{{prod.title}}">
+          <div class="card-body">
+            <h5 class="card-title">{{prod.title}}</h5>
+            <p class="card-text card-description">{{prod.description}}</p>
+            <a href="{{prod.url}}" target="_blank" class="btn btn-success">Visitar Página</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 item animated" *ngFor="let prod of productsDataSection3" animateOnScroll animationName="fadeInUp">
+        <div class="card">
+          <img class="card-img-top" src="{{prod.imageUrl}}" alt="{{prod.title}}">
+          <div class="card-body">
+            <h5 class="card-title">{{prod.title}}</h5>
+            <p class="card-text card-description">{{prod.description}}</p>
+            <a href="{{prod.url}}" target="_blank" class="btn btn-success">Visitar Página</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row item animated" animateOnScroll animationName="fadeInRightBig">
+      <div class="col-12">
+        <h4>Nuestras Semillas</h4>
+      </div>
+    </div>
+    <div class="row item animated" animateOnScroll animationName="fadeInRightBig">
+      <div class="col-12 col-sm-4">
+        <img class="img-fluid" src="/assets/advanta.png">
+      </div>
+      <div class="col-12 col-sm-4">
+        <img class="img-fluid" src="/assets/argenetics.png">
+      </div>
+      <div class="col-12 col-sm-4">
+        <img class="img-fluid" src="/assets/tijereta.png">        
+      </div>
+    </div>
+    <div class="row item animated" animateOnScroll animationName="fadeInRightBig">
+      <div class="col-12 col-sm-3">
+        <img class="img-fluid" src="/assets/morgan_semillas.png">
+      </div>
+      <div class="col-12 col-sm-3">
+        <img class="img-fluid" src="/assets/next_dow.png">
+      </div>
+      <div class="col-12 col-sm-3">
+        <img class="img-fluid" src="/assets/cal_west_seeds.png">
+      </div>
+      <div class="col-12 col-sm-3">
+        <img class="img-fluid" src="/assets/gentos.png">
+      </div>
+    </div>
+  </div>
+</section>
